@@ -1,9 +1,16 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Navbar fixa no topo */
 .navbar {
   position: fixed; /* fixa no topo */
   top: 0;
   left: 0;
-  width: 100%; /* ocupa toda a largura */
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,15 +19,14 @@
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* fica sobre outros elementos */
+  z-index: 1000;
 }
 
 /* Logo no canto esquerdo */
 .navbar h1 {
   font-size: 1.8rem;
-  margin: 0;
-  color: #fff0f5; /* lilás claro */
-  flex-shrink: 0;
+  color: #fff0f5;
+  margin-right: auto; /* empurra o menu para a direita */
 }
 
 /* Lista de links no canto direito */
@@ -28,14 +34,12 @@
   display: flex;
   list-style: none;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
 }
 
 /* Itens da lista */
 .navbar ul li a {
   text-decoration: none;
-  color: #fff0f5; /* lilás claro */
+  color: #fff0f5;
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -44,11 +48,75 @@
 
 /* Hover nos links */
 .navbar ul li a:hover {
-  background-color: #d1b3ff; /* lilás pastel */
-  color: #4b0082; /* lilás escuro */
+  background-color: #d1b3ff;
+  color: #4b0082;
 }
 
-/* Espaço entre logo e menu */
-.navbar h1 {
-  margin-right: auto;
+/* Main container para empurrar o conteúdo abaixo da navbar */
+main {
+  flex: 1;
+  padding-top: 80px; /* altura aproximada da navbar */
 }
+
+/* Rodapé fixo no final da página */
+.footer {
+  background-color: #e6d9f2; /* lilás médio */
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4b0082;
+  box-shadow: 0 -4px 10px rgba(128, 0, 128, 0.1);
+}
+
+/* Lista de links sociais */
+.footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Links sociais */
+.footer ul li a {
+  text-decoration: none;
+  color: #6a0dad;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover nos links */
+.footer ul li a:hover {
+  background-color: #d1b3ff;
+  color: #4b0082;
+}
+
+/* Garantir que o body ocupe a tela inteira */
+body, #root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main ocupa o espaço restante */
+main {
+  flex: 1;
+  padding-top: 80px; /* altura da navbar */
+}
+
+/* Rodapé ocupa toda a largura e fica no final */
+.footer {
+  background-color: #e6d9f2;
+  width: 100vw; /* garante largura total da tela */
+  padding: 1.5rem 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4b0082;
+  box-shadow: 0 -4px 10px rgba(128, 0, 128, 0.1);
+  margin-top: auto; /* empurra o rodapé para baixo */
+}
+
