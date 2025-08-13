@@ -1,0 +1,54 @@
+/* Navbar fixa no topo */
+.navbar {
+  position: fixed; /* fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%; /* ocupa toda a largura */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6a0dad; /* lilás escuro */
+  padding: 1rem 2rem;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* fica sobre outros elementos */
+}
+
+/* Logo no canto esquerdo */
+.navbar h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #fff0f5; /* lilás claro */
+  flex-shrink: 0;
+}
+
+/* Lista de links no canto direito */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Itens da lista */
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff0f5; /* lilás claro */
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover nos links */
+.navbar ul li a:hover {
+  background-color: #d1b3ff; /* lilás pastel */
+  color: #4b0082; /* lilás escuro */
+}
+
+/* Espaço entre logo e menu */
+.navbar h1 {
+  margin-right: auto;
+}
